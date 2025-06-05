@@ -31,7 +31,7 @@ footer {
 
 .card{
   width: 45%;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .left{
@@ -45,13 +45,13 @@ footer {
 @media (max-width: 680px){
   .logo{
     width: 100px;
-    background-color: aqua;
+    /* background-color: aqua; */
   }
 
   h1{
     text-align: center;
     font-size: 3.5rem;
-    background-color: aqua;
+    /* background-color: aqua; */
   }
 
   .card{
