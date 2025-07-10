@@ -1,14 +1,16 @@
 var num0fDrums = document.querySelectorAll(".drum").length;
 
 for(var i=0 ; i<num0fDrums ; i++){
-    document.querySelectorAll("button")[i].addEventListener("click", function (){
+    document.querySelectorAll(".drum")[i].addEventListener("click", function (){
     var buttonInnerHTML = this.innerHTML;
     makesound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
 
 });
 
 document.addEventListener("keypress", function(event){
     makesound(event.key);
+    buttonAnimation(event.key);
 });
 }
 
@@ -51,6 +53,15 @@ function makesound(key){
         
         default: console.log(buttonInnerHTML);
     }
+}
+
+function buttonAnimation(currentkey){
+    var activekey = document.querySelector("."+currentkey);
+    activekey.classList.add("pressed");
+
+    setTimeout(function(){
+        activekey.classList.remove("pressed");
+    }, 200);
 }
 
 // var audio = new Audio("./sounds/crash.mp3");
